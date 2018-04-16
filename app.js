@@ -17,8 +17,11 @@ var campgroundRoutes = require("./routes/campgrounds"),
     commentRoutes    = require("./routes/comments"),
     authRoutes       = require("./routes/auth_index");
     
-
-mongoose.connect("mongodb://localhost/yelp_camp"); // every version should have it own db but meeh i kept the same db
+// NEW MONGOLAB this is the link taken from the site add user and pass 
+// like below mongodb://<dbuser>:<dbpassword>@ds247499.mlab.com:47499/yelpcamp
+// note that this link will take you to a new mongo db so if you open the app after reroputng it to MONGO LAB you wont see any camps coz its new 
+mongoose.connect("mongodb://carrot:carrot@ds247499.mlab.com:47499/yelpcamp");
+//mongoose.connect("mongodb://localhost/yelp_camp"); // every version should have it own db but meeh i kept the same db
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public")); // __dirname means here anywhere is the project placed so no messing around when you move the file 

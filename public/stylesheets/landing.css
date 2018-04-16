@@ -2,7 +2,10 @@ body {
   background-color: #000;
 }
 
-
+.footprint{
+    margin-top:230px;
+    margin-left:7px
+}
 /* We set the z-index to 1 so all of the elements inside the landing-header div will be in front of the background images
 The position is set to relative so we can use the z-index property; the default position value is static, which ignores z-index
 We use text-align to center our text and button
