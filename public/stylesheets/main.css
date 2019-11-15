@@ -1,16 +1,16 @@
 .thumbnail img {
-    width: 100%;
+  width: 100%;
 }
 .thumbnail{
-    padding: 0px;
+  padding: 0px;
 }
 .thumbnail .caption-full{
-    padding: 9px;
+  padding: 9px;
 }
 .delete-form{
-    display: inline;
+  display: inline;
 }
 .footprint{
-    margin-top:90px;
-    margin-left: 7px
+  margin-top:90px;
+  margin-left: 7px
 }

@@ -16,7 +16,7 @@ Each Campground has:
 * Setup new campground POST route
 * Add in body-parser
 * Setup route to show form
-* Add basic unstyled form
+* Add basic un-styled form
 
 #Style the campgrounds page
 * Add a better header/title
@@ -37,7 +37,6 @@ Each Campground has:
 * Show db.collection.drop()
 * Add a show route/template
 
-
 #Refactor Mongoose Code
 * Create a models directory
 * Use module.exports
@@ -52,7 +51,6 @@ Each Campground has:
 
 
 
-
 RESTFUL ROUTES
 
 name      url      verb    desc.
@@ -61,7 +59,6 @@ INDEX   /dogs      GET   Display a list of all dog
 NEW     /dogs/new  GET   Displays form to make a new dog
 CREATE  /dogs      POST  Add new dog to DB
 SHOW    /dogs/:id  GET   Shows info about one dog
-
 
 INDEX   /campgrounds
 NEW     /campgrounds/new
