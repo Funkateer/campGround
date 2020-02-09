@@ -7,7 +7,7 @@ var campgroundSchema = new mongoose.Schema({
   description: String,
   price: Number, // add a price
   author: {
-    // now we can add a campground with an user associated
+    // add a campground with an user associated
     id: {
       type: mongoose.Schema.Types.ObjectId,
       ref: "User"
@@ -22,7 +22,5 @@ var campgroundSchema = new mongoose.Schema({
   ]
 });
 
-// var Campground = mongoose.model("Campground", campgroundSchema);
 
-// we need something that export what has been executed like a function return
 module.exports = mongoose.model("Campground", campgroundSchema);

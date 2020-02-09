@@ -2,7 +2,6 @@ var Campground = require("../models/campground");
 var Comment = require("../models/comment");
 
 // all middleware here
-
 var middlewareObj = {};
 
 middlewareObj.checkCampgroundOwnership = function(req, res, next) {
@@ -47,13 +46,12 @@ middlewareObj.checkCommentOwnership = function(req, res, next) {
 };
 
 // This function is for making sure to comment you need t be logged in
-// you can add "isLoggedIn" between the route and function of any route you want
 middlewareObj.isLoggedIn = function isLoggedIn(req, res, next) {
   if (req.isAuthenticated()) {
     return next();
   }
-  req.flash("error", "Please login first"); // this is a flash messages error is hte color and next to it the txt shown in the flash mess
-  res.redirect("/login"); // we put flash before bc it will handled as req but it will show only after the NEXT
+  req.flash("error", "Please login first");
+  res.redirect("/login");
 };
 
 module.exports = middlewareObj;

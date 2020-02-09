@@ -2,17 +2,13 @@ body {
   background-color: #000;
 }
 
-.footprint{
-  margin-top:230px;
-  margin-left:7px
+.footprint {
+  margin-top: 230px;
+  margin-left: 7px;
 }
-/* We set the z-index to 1 so all of the elements inside the landing-header div will be in front of the background images
-The position is set to relative so we can use the z-index property; the default position value is static, which ignores z-index
-We use text-align to center our text and button
-We use padding-top to vertically center our div, since it's contents take up quite a bit of space
-we use 40vh (view height) instead of 50, this way the content looks more visually centered */
+
 #landing-header {
-  z-index: 1; /* all this below is to center the button ecc */
+  z-index: 1;
   position: relative;
   text-align: center;
   padding-top: 40vh;
@@ -22,9 +18,6 @@ we use 40vh (view height) instead of 50, this way the content looks more visuall
   color: #fff;
 }
 
-/* this is the ul
-TO SEE MORE ON THIS VISIT https://github.com/nax3t/background-slider
-but basically all this is just to make stuff slide and fade */
 .slideshow {
   position: fixed;
   width: 100%;
@@ -52,7 +45,7 @@ but basically all this is just to make stuff slide and fade */
 }
 
 .slideshow li:nth-child(1) {
-  background-image: url(http://i.imgur.com/K3mPv14.jpg)
+  background-image: url(http://i.imgur.com/K3mPv14.jpg);
 }
 .slideshow li:nth-child(2) {
   background-image: url(http://i.imgur.com/SBEmFpv.jpg);
@@ -81,14 +74,14 @@ but basically all this is just to make stuff slide and fade */
     animation-timing-function: ease-out;
   }
   20% {
-    opacity: 1
+    opacity: 1;
   }
   30% {
-    opacity: 0
+    opacity: 0;
   }
 }
 
 /* Older browser support - .no-cssanimations class added by modernizer */
 .no-cssanimations .slideshow li {
-	opacity: 1;
+  opacity: 1;
 }

@@ -21,10 +21,6 @@
 							<em>Submitted by </em><strong><%= campground.author.username %></strong>
 						</p>
 						<!--adding the logic if somebody is the owner or not -->
-						<!--it looks like the one we used in campgrounds.js in the middleware to check campground ownership -->
-						<!--foundCampground.author.id.equals(req.user._id)-->
-						<!--we set currentUser in app.js and its shared in all templates cool  -->
-						<!-- we added currentUser && cam.. to check if there is a user in the first place if not will throw an error-->
 						<% if(currentUser && campground.author.id.equals(currentUser._id)){ %>
 							<a class="btn btn-warning btn-xs "href="/campgrounds/<%=campground._id%>/edit">Edit</a>
 							<form class="delete-form" action="/campgrounds/<%=campground._id%>?_method=DELETE" method="POST">
@@ -41,21 +37,19 @@
 					<% campground.comments.forEach(function(comment){ %>
 					<div class="row">
 						<div class="col-md12">
-							<!-- NEW we need to change .author coz now in out template we got a different atr to it aka id and user name -->
 							<strong><%= comment.author.username %></strong>
 							<span class="pull-right">Some days ago</span>
 							<p>
 								<%= comment.text %>
 							</p>
-							<!-- ULTRA NEW hiding the edit and delete button to non users -->
 							<% if(currentUser && comment.author.id.equals(currentUser._id)){ %>
 
-							<!--NEW edit button for comments -->
+							<!-- edit button for comments -->
 							<a class="btn btn-xs btn-warning delete-form"
 								href="/campgrounds/<%=campground._id %>/comments/<%=comment._id%>/edit">
 								Edit
 							</a>
-							<!-- we need a form for the DELETE button coz we need to do a PUT req -->
+							<!-- form for the DELETE button -->
 							<form action= "/campgrounds/<%=campground._id %>/comments/<%=comment._id%>?_method=DELETE" method="POST">
 								<input type="submit" class=" btn btn-xs btn-danger delete-form" value="Delete :p">
 							</form>
