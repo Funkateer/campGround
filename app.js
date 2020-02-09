@@ -26,7 +26,7 @@ var campgroundRoutes = require("./routes/campgrounds"),
 // mongoose.connect("process.env.DATABASEURL");
 
 // connect to heroku DB
-// mongoose.connect("mongodb://carrot:carrot@ds247499.mlab.com:47499/yelpcamp");
+mongoose.connect("mongodb://carrot:carrot@ds247499.mlab.com:47499/yelpcamp");
 
 
 // express methods
