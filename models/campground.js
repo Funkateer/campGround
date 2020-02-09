@@ -6,18 +6,19 @@ var campgroundSchema = new mongoose.Schema({
   image: String,
   description: String,
   price: Number, // add a price
-  author: { // now we can add a campground with an user associated
+  author: {
+    // now we can add a campground with an user associated
     id: {
       type: mongoose.Schema.Types.ObjectId,
-      ref:"User"
+      ref: "User"
     },
     username: String
   },
   comments: [
-  {
-    type: mongoose.Schema.Types.ObjectId,
-    ref:"Comment"
-  }
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Comment"
+    }
   ]
 });
 

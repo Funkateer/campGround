@@ -1,6 +1,6 @@
 // we need this otherwise we'll have issue with app is not defined
 var express  = require("express");
-// we0ll pass this var instead of app
+// well pass this var instead of app
 var router   = express.Router();
 
 var passport = require("passport");
