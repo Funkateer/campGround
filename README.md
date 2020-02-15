@@ -5,7 +5,7 @@ CampGrounds is a YELP-like web app, Users can log in add and rate camping ground
 
 
 ## Screenshots
-![screenshot](https://alabugrara.com/img/campGround-poster.png)
+![screenshot](https://alabugrara.com/img/poster-campGround.png)
 
 
 ## Live Demo
